@@ -1,0 +1,23 @@
+.env
+api.txt
+__pycache__/
+*.py[cod]
+
+# Local datasets and benchmark releases.
+data/
+dataset/
+*.zip
+
+# Runtime outputs.
+results/
+outputs/
+detect_script/
+
+# Local caches.
+.hf_cache/
+.cache/
+
+# Temporary paper extraction files.
+syncred_paper.pdf
+syncred_paper.txt
+paper_pages/
