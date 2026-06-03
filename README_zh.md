@@ -1,10 +1,12 @@
+<div align="center">
+
 # SYNCRED-Bench
 
 **面向 AI 生成视觉误导信息中“合成可信度”的评测基准**
 
-[English](README.md) | [中文](README_zh.md)
+🤗 [Hugging Face](https://huggingface.co/datasets/thu-coai/Syncred-Bench) | 📄 [论文](https://arxiv.org/pdf/2606.03348) | 💻 [代码仓库](https://github.com/thu-coai/Syncred-Bench) | 🌐 [English](README.md)
 
-[论文](https://arxiv.org/pdf/2606.03348) · [代码仓库](https://github.com/thu-coai/Syncred-Bench) · [数据集](https://huggingface.co/datasets/thu-coai/Syncred-Bench)
+</div>
 
 完整图像集可在 [Hugging Face](https://huggingface.co/datasets/thu-coai/Syncred-Bench) 获取。
 
@@ -92,28 +94,13 @@ python scripts/evaluate_mllm.py \
 
 ## 数据集分类体系
 
-6 类可信形式：
+![可信形式分类体系](assets/category_taxonomy.png)
 
-| 代码 | 类别 | 示例 |
-| --- | --- | --- |
-| ML | 媒体版式 | 新闻 App 页面、电视字幕条、报纸页面 |
-| IN | 机构通知 | 官方通知、公告 |
-| PI | 平台界面 | 社交媒体页面、聊天窗口、网页 |
-| CR | 凭证记录 | 证书、奖状、发票、收据、订单页 |
-| AD | 分析展示 | 图表、看板、排行榜、后台面板 |
-| AM | 测评材料 | 试卷、准考证、成绩单、录取通知 |
+![可信传播风格分类体系](assets/circulation_taxonomy.png)
 
-7 种可信传播风格：
+## 基准结果
 
-| 代码 | 风格 | 视觉线索 |
-| --- | --- | --- |
-| NR | 原生渲染 | 清晰的直接渲染或截图 |
-| SC | 扫描副本 | 页边、阴影、轻微倾斜、扫描噪声 |
-| CC | 拍摄副本 | 纸张弯曲、光照不均、背景环境 |
-| FC | 传真副本 | 条带、模糊、传真或复印痕迹 |
-| SP | 屏幕拍摄 | 摩尔纹、眩光、反射、屏幕边框 |
-| CV | 裁切视图 | 缺失边缘、上下文被截断 |
-| OP | 在线压缩 | 重压缩、像素化、清晰度下降 |
+![可信形式和传播风格上的检测结果](assets/detection_results.png)
 
 ## 使用建议
 

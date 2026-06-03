@@ -1,10 +1,12 @@
+<div align="center">
+
 # SYNCRED-Bench
 
 **Benchmarking Synthetic Credibility in AI-Generated Visual Misinformation**
 
-[English](README.md) | [中文](README_zh.md)
+🤗 [Hugging Face](https://huggingface.co/datasets/thu-coai/Syncred-Bench) | 📄 [Paper](https://arxiv.org/pdf/2606.03348) | 💻 [Code](https://github.com/thu-coai/Syncred-Bench) | 🌐 [中文](README_zh.md)
 
-[Paper](https://arxiv.org/pdf/2606.03348) · [Code](https://github.com/thu-coai/Syncred-Bench) · [Dataset](https://huggingface.co/datasets/thu-coai/Syncred-Bench)
+</div>
 
 The full image set is available at [Hugging Face](https://huggingface.co/datasets/thu-coai/Syncred-Bench).
 
@@ -92,28 +94,13 @@ The script resumes completed images by default. Add `--overwrite` to regenerate 
 
 ## Dataset Taxonomy
 
-Credible-form categories:
+![Credible-form taxonomy](assets/category_taxonomy.png)
 
-| Code | Category | Examples |
-| --- | --- | --- |
-| ML | Media Layout | news app pages, TV lower-thirds, newspaper pages |
-| IN | Institutional Notice | official notices, public announcements |
-| PI | Platform Interface | social media pages, chat windows, webpages |
-| CR | Credential Record | certificates, awards, invoices, receipts, order pages |
-| AD | Analytical Display | charts, dashboards, ranking reports, backend panels |
-| AM | Assessment Material | exam papers, admission tickets, transcripts, admission notices |
+![Credible-circulation taxonomy](assets/circulation_taxonomy.png)
 
-Credible-circulation styles:
+## Benchmark Results
 
-| Code | Style | Cue |
-| --- | --- | --- |
-| NR | Native Rendering | clean direct render or screenshot |
-| SC | Scanned Copy | page borders, shadows, slight skew, scanner noise |
-| CC | Camera Copy | paper curvature, uneven lighting, background context |
-| FC | Fax Copy | banding, blur, fax or photocopy artifacts |
-| SP | Screen Photograph | moire, glare, reflections, screen bezels |
-| CV | Cropped View | missing margins and truncated context |
-| OP | Online Compression | recompression, pixelation, reduced sharpness |
+![Detection performance across credible forms and circulations](assets/detection_results.png)
 
 ## Evaluation Notes
 
@@ -124,10 +111,6 @@ The MLLM prompt asks the model to decide whether the image is AI-generated and t
 ```
 
 For SYNCRED-Bench positives, `ground_truth=ai`. For real negative sets, use `--ground-truth real`. The summary reports `ai_rate` and accuracy for each model, content category, and circulation style.
-
-![MLLM TPR at FPR budgets](assets/mllm_tpr_at_fpr.png)
-
-![False-negative cues](assets/mllm_false_negative_cues.png)
 
 ## Citation
 
