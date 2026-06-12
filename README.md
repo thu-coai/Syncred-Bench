@@ -102,6 +102,8 @@ The script resumes completed images by default. Add `--overwrite` to regenerate 
 
 ![Detection performance across credible forms and circulations](assets/detection_results.png)
 
+We found that the current version of the SightEngine API (2.7.2) could achieve 92.3% TPR, much stronger than the older version (Version 2.5.11b) we tested on May 5.
+
 ## Evaluation Notes
 
 The MLLM prompt asks the model to decide whether the image is AI-generated and to return compact JSON:
